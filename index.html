@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <script src="./js/html2canvas.min.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Canvas</title>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <form>
+                <label> Nome do primeiro Colocado
+                    <input type="text" id="primeiroColocado">
+                </label>
+                <label> Nome do segundo Colocado
+                    <input type="text" id="segundoColocado">
+                </label>
+                <label> Nome do terceiro Colocado
+                    <input type="text" id="terceiroColocado">
+                </label>
+                <label> Data do ranking
+                    <input type="text" id="dataRanking">
+                </label>
+            </form>
+        </header>
+
+   
+        <div class="main" id="divToDownload">
+
+            <h1 class="titulo">Game</h1>
+            <h1 class="titulo2">New Checkout</h1>
+            <p>Ganhadores <span id="dataPubli"></span></p>
+
+            <div class="linha1">
+                <div class="numero1">1</div>
+                <div class="nomeWinner" id="nome1">Primeiro(a) Colocado</div>
+            </div>
+
+            <div class="linha2">
+                <div class="numero2">2</div>
+                <div class="nome2" id="nome2">Segundo(a) Colocado</div>
+                    
+            </div>
+            <div class="linha2">
+                <div class="numero2">3</div>
+                <div class="nome2" id="nome3">Terceiro(a) Colocado</div>
+                    
+            </div>
+        </div>
+
+        <button class="btn" id="downloadButton">Baixar Imagem</button>
+
+    </div>
+</body>
+</html>
