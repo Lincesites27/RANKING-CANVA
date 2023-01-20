@@ -57,6 +57,7 @@ form input{
 }
 
 .numero1{
+    position: relative;
     display: flex;
     color: #fff;
     font-size: 48px;
@@ -96,6 +97,7 @@ form input{
 }
 
 .numero2{
+    position: relative;
     display: flex;
     color: #2ad2c9 !important;
     font-size: 32px;
@@ -131,11 +133,12 @@ form input{
 .main{
    
     height: 90vh;
-    width: 100%;
+    width: 50%;
     max-width: 100%;
     background-image: url(../img/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50%;
     display: flex;
     flex-direction: column;
    border-radius: 20px;   

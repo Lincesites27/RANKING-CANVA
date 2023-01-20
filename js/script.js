@@ -6,8 +6,8 @@ var dataPubli = document.querySelector("#dataPubli")
 var nome1 = document.querySelector("#nome1")
 var nome2 = document.querySelector("#nome2")
 var nome3 = document.querySelector("#nome3")
-var downloadButton = document.getElementById("#downloadButton");
-var divToDownload = document.getElementById("#divToDownload");
+var downloadButton = document.getElementById("downloadButton");
+var divToDownload = document.getElementById("divToDownload");
 
   
 
@@ -27,12 +27,14 @@ terceiroColocado.addEventListener("input", ()=>{
     nome3.textContent = terceiroColocado.value
 })
 
-downloadButton.addEventListener("click", function() {
-    html2canvas(divToDownload).then(function(canvas) {
-      var data = canvas.toDataURL();
-      var downloadLink = document.createElement("a");
-      downloadLink.href = data;
-      downloadLink.download = "imagem.png";
-      downloadLink.click();
-    });
+ downloadButton.addEventListener("click", function() {
+   html2canvas(divToDownload, {
+    backgroundColor: null
+   }).then(function(canvas) {
+   var data = canvas.toDataURL();
+    var downloadLink = document.createElement("a");
+     downloadLink.href = data;
+      downloadLink.download = 'RanKing -'+dataRanking.value.replace('/','-' )+ '.png';
+     downloadLink.click();
+   });
   });
